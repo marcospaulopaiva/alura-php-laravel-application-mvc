@@ -14,12 +14,10 @@ class SeriesController extends Controller
             'The Office'
         ];
 
-        $html = '<ul>';
-        foreach ($series as $serie){
-            $html .= "<li>$serie</li>";
-        }
-        $html .= '</ul>';
+        // return view('listar-series',[
+        //     'series' => $series
+        // ]);
 
-        return $html;
+        return view('listar-series', compact('series'));
     }
 }
